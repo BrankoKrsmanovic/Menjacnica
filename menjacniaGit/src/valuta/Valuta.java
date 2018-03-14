@@ -14,6 +14,8 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
+		if(naziv == null || naziv.equals(""))
+			throw new RuntimeException("ERROR: Nedozvoljen unos!");
 		this.naziv = naziv;
 	}
 
@@ -22,6 +24,8 @@ public class Valuta {
 	}
 
 	public void setSkraceno(String skraceno) {
+		if(skraceno == null || skraceno.equals(""))
+			throw new RuntimeException("ERROR: Nedozvoljen unos!");
 		this.skraceno = skraceno;
 	}
 
@@ -30,6 +34,8 @@ public class Valuta {
 	}
 
 	public void setDatum(GregorianCalendar datum) {
+		if(datum == null)
+			throw new RuntimeException("ERROR: Nedozvoljen unos!");
 		this.datum = datum;
 	}
 
@@ -38,6 +44,8 @@ public class Valuta {
 	}
 
 	public void setKurs(Kurs kurs) {
+		if(kurs == null)
+			throw new RuntimeException("ERROR: Nedozvoljen unos!");
 		this.kurs = kurs;
 	}
 
